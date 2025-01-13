@@ -10,7 +10,8 @@
     --color_fondo2: #394f50;
     --tittle: #7eb45c;
     --sub-title: #d8ffa7;
-    
+    --toggle:#306724;
+
     --flecha: #d3ff56;
     --titulo-flotante: #3bbea6;
     --blanco: #ffffff;
@@ -32,7 +33,7 @@ body{
 } */
 .navigation{
     position: fixed;
-    width: 8vw;
+    width: 7%;
     height: 100%;
     background: linear-gradient(to right, var(--color_fondo1), var(--color_fondo2));
     /* border-left: 15px solid var(--color_fondo1); */
@@ -53,13 +54,15 @@ body{
     position: relative;
     /* width: 60px; */
     /* height: 60px; */
-    margin-bottom: 8vh;
+    /* margin-top: 1vh; */
+    margin-bottom: 10vh;
     display: flex;
     justify-content: center;
     align-items:center;
     font-size: 3.5rem;
     cursor: pointer;
     color: var(--tittle);
+    background: var(--toggle)
 }
 .toggle:hover{
     filter: drop-shadow(0px 0px 8px var(--flecha));
@@ -86,8 +89,8 @@ body{
 .navigation ul li:hover,
 .navigation ul li.hovered{
     /* background-color: var(--blanco); */
-    filter: drop-shadow(0px 0px 8px var(--flecha));
-    text-shadow: 0px 0px 3px var(--flecha); 
+    filter: drop-shadow(0px 0px 3px var(--flecha));
+    text-shadow: 0px 0px 8px var(--flecha); 
     color: var(--negro);
     /* color: var(--blanco); */
 }
@@ -106,8 +109,8 @@ body{
 .navigation ul li a .icon{
     position: relative;
     display: block;
-    min-width:60px;
-    height:60px ;
+    min-width: 60px;
+    height: 60px;
     line-height:75px;
     text-align: center;
     margin-left: 1.5vw;
@@ -121,9 +124,9 @@ body{
 }
 .navigation ul li.curriculum:hover,
 .navigation ul li.curriculum.hovered {
-    filter: drop-shadow(0px 0px 8px var(--flecha));
-    text-shadow: 0px 0px 3px var(--flecha);
-    color: var(--negro);
+    filter: drop-shadow(0px 0px 1px var(--flecha));
+    text-shadow: 0px 0px 1px var(--flecha);
+    color: var(--blanco);
 }
 
 .navigation ul li.curriculum a:hover,
@@ -131,22 +134,15 @@ body{
     color: var(--sub-tittle);
 }
 
-
-
-/* .mayus{
-    font-size: 4rem;
-
-} */
-
 .navigation ul li a .title{
     position: relative;
     display: block;
     padding: 0 3.5vw;
-    height: 5vh;
+    height: .5vh;
     line-height:58px;
     text-align: start;
     white-space: nowrap;
-    font-size: 1.12rem;
+    font-size: 1rem;
 }
 
 /* .navigation ul li:hover a::before,
@@ -203,17 +199,42 @@ body{
 /* --------------------------------------------------- */
 /* Aca empieza la zona main */
 .main{
-    position: absolute;
-    width: calc(100% - 300px);
-    left: 300px;
-    background: var(--white);
-    transition:0.5s ;
-}
 
-.main.active{
+    display: grid;
+    grid-template-columns: .7fr 1.3fr;
+    gap: 1rem;
+    height: 100vh;
+    width: auto;
+    margin-left: 6.8%;
+
+    background: linear-gradient(to right, var(--color_fondo1), var(--color_fondo2));
+    transition:0.5s ;
+    text-align: right;
+}
+/* .main.active{
     width: calc(100% - 80px);
     left: 80px;
+} */
+
+
+
+.foto{
+
 }
+
+
+
+.texto{
+
+}
+
+
+
+
+
+
+
+
 .topbar{
     width: 100%;
     height: 60px;

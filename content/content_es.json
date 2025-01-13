@@ -1,0 +1,189 @@
+
+{
+    "intro":{
+        "welcome": "Bienvenidos!"
+    },
+    "first": {
+        "greeting":"¡Qué tal!",
+        "whoAmI":"Yo soy Jhoan Diaz",
+        "title": "Desarrollador Full-Stack",
+        "title1":"Desarrollador",
+        "text":[
+            "¡Explora mi portafolio, donde combino mi experiencia en programación con una mentalidad", 
+            "creativa para abordar desafíos tecnológicos emocionantes y dar vida a proyectos innovadores!"
+        ],
+        "sub-text":[
+            "El talento no asegura la victoria, pero", 
+            "la disciplina limpia el camino hacia esta."
+        ],
+        "button-Go":"VAMOS!"
+    },
+    "intro-about": {
+        "think": "Piensa..."
+    },
+    "aboutMe": {
+        "name": "Jhoan Diaz",
+        "occupation":"Desarrollador",
+        "title": "Acerca de mi",
+        "parrafo1":[
+            "El bagaje adquirido dirigiendo y completando proyectos",
+            "me ha impulsado a optimizar los procesos y recursos necesarios",
+            "para completar tareas. "
+        ],
+        "parrafo2":[
+            "La programación ha potenciado mis habilidades en análisis lógico,",
+            "resolución de problemas y trabajo en equipo, lo que me permite guiar y",
+            "colaborar efectivamente en entornos multidisciplinarios."
+        ],
+        "parrafo3":[
+            "Mi objetivo es continuar desarrollándome técnica y profesionalmente, ",
+            "contribuyendo con liderazgo a proyectos de impacto para",
+            "generar ambientes colaborativos."
+        ],
+        "imgLin":"",
+        "imgEmail":"",
+        "imgGit":"",
+        "imgAboutMe":""
+    },
+    "principles": {
+        "tittle1": "Luces guía",
+
+        "principle1": "Ética profesional",
+        "description1":[
+            "Confidencialidad",
+            "Fiabilidad"
+        ],
+        "principle2": "Orientación al cliente",
+        "description2":[
+            "Communication",
+            "Adaptabilidad"
+        ],
+        "principle3": "Atención al detalle",
+        "description3":[
+            "Exactitud",
+            "Consistencia"
+        ],
+        "principle4": "Competencia",
+        "description4":[
+            "Pericia",
+            "Perseverancia"
+        ],
+        "principle5": "Compromiso",
+        "description5":[
+            "Fiabilidad",
+            "Dedicación"
+        ],
+        "imgPrinciple":""
+    },
+
+    "mission&vision": {
+        "mision": "Aspiración",
+        "description1":[
+            "Diseñar, desarrollar e implementar soluciones de software de extremo",
+            "a extremo que integren sin problemas interfaces centradas en el usuario",
+            "con sistemas back-end sólidos, entregando aplicaciones innovadoras y",
+            "escalables que satisfagan las necesidades de los clientes y de la organización."
+        ],
+        "vision":"Ambición",
+        "description2":[
+            "Crecer como un programador versátil y capacitado, construyendo soluciones",
+            "digitales impactantes que empoderen a las comunidades e impulsen",
+            "el progreso tecnológico, al tiempo que fomentan la pasión por la creatividad",
+            "y el aprendizaje permanente en la industria tecnológica."
+        ],
+        "imgMisiion":"",
+        "imgVision":""
+    },
+    
+    "services": {
+        "tittle1": "Servicios",
+
+        "service1": "Construcción de Interfaces Interactivas",
+        "description1":[
+            "Usabilidad",
+            "Sensibilidad"
+        ],
+        "service2": "Gestión de Bases de Datos",
+        "description2":[
+            "Consulta de Datos",
+            "Escalabilidad"
+        ],
+        "service3": "Sistema Integral de Comercio Electrónico",
+        "description3":[
+            "Desarrollo del Back-End",
+            "Desarrollo de la Interfaz de Usuario"
+        ],
+        "service4": "Desarrollo e Integración de APIs",
+        "description4":[
+            "Manual de API",
+            "Testeo y Depuración"
+        ],
+        "imgService":""
+    },
+    "projects": {
+        "tittle1": "Proyectos",
+        "text":[
+            "Estos aspectos destacados muestran proyectos académicos completados en varios lenguajes de programación.",
+            "Para ver más proyectos finalizados, visite mi perfil de GitHub."
+        ],
+        "project1": "Disfraz de fantasía",
+        "imgProject1":"",
+        "description1":[
+            "Base de datos y consultas",
+            "para sistema de tienda de disfraces."
+        ],
+        "project2": "Curando Patitas",
+        "imgProject2":"",
+        "description2":[
+            "Programa de Control",
+            "para Veterinaria."
+        ],
+        "project3": "Deseo Parqueadero",
+        "imgProject3":"",
+        "description3":[
+            "Programa de estacionamiento",
+            ""
+        ],
+        "project4": "Donkey Race",
+        "imgProject4":"",
+        "description4":[
+            "Programa de control de apuestas",
+            ""
+        ],
+        "buttonProjects":[
+            "Echa un vistazo",
+            "a mi GitHub"
+        ]
+
+    },
+    "expertise": {
+        "tittle1": "Pericia",
+        "expertise1": "Python",
+        "imgExpertise1":"",
+        "expertise2": "Html",
+        "imgExpertise2":"",
+        "expertise3": "Css",
+        "imgExpertise3":"",
+        "expertise4": "Javascript",
+        "imgExpertise4":"",
+        "expertise5": "Java",
+        "imgExpertise5":"",
+        "expertise6": "MySQL",
+        "imgExpertise6":"",
+        "expertise7": "React",
+        "imgExpertise7":"",
+        "expertise8": "Git",
+        "imgExpertise8":""
+
+
+
+    },
+    "contact": {
+        "form": {
+            "name": "Name",
+            "email": "Email",
+            "message": "Message"
+        },
+        "submitText": "Send"
+    }
+}

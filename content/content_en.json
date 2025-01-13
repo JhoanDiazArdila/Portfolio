@@ -1,0 +1,189 @@
+
+{
+    "intro":{
+        "welcome": "Welcome!"
+    },
+    "first": {
+        "greeting":"Hey there!",
+        "whoAmI":"This is Jhoan Diaz",
+        "title": "Full-Stack Developer",
+        "title1":"Developer",
+        "text":[
+            "Explore my portfolio, where I combine programming expertise with a creative",
+            "mindset to tackle exciting tech challenges and bring innovative projects to life!"
+        ],
+        "sub-text":[
+            "Talent doesn't guarantee victory, but",
+            "discipline paves the way to it."
+        ],
+        "button-Go":"GO!"
+    },
+    "intro-about": {
+        "think": "Think..."
+    },
+    "aboutMe": {
+        "name": "Jhoan Diaz",
+        "occupation":"Developer",
+        "title": "About me",
+        "parrafo1":[
+            "The experience I’ve gained in leading and completing projects",
+            "has driven me to optimize the processes and resources needed",
+            "to accomplish tasks. "
+        ],
+        "parrafo2":[
+            "Programming has strengthened my skills in logical analysis,",
+            "problem-solving, and teamwork, enabling me to guide and",
+            "collaborate effectively in multidisciplinary environments. "
+        ],
+        "parrafo3":[
+            "My goal is to continue growing both technically and ",
+            "professionally, contributing leadership to impactful projects and",
+            "fostering a collaborative atmosphere."
+        ],
+        "imgLin":"",
+        "imgEmail":"",
+        "imgGit":"",
+        "imgAboutMe":""
+    },
+    "principles": {
+        "tittle1": "Guiding Lights",
+
+        "principle1": "Professional Ethics",
+        "description1":[
+            "Confidentiality",
+            "Accountability"
+        ],
+        "principle2": "Customer-oriented",
+        "description2":[
+            "Communication",
+            "Adaptability"
+        ],
+        "principle3": "Attention to Detail",
+        "description3":[
+            "Accuracy",
+            "Consistency"
+        ],
+        "principle4": "Competence",
+        "description4":[
+            "Honesty",
+            "Perseverance"
+        ],
+        "principle5": "Commitment ",
+        "description5":[
+            "Reliability",
+            "Dedication"
+        ],
+        "imgPrinciple":""
+    },
+
+    "mission&vision": {
+        "mision": "Aspiration",
+        "description1":[
+            "To design, develop, and deploy end-to-end software solutions",
+            "that seamlessly integrate user-centric interfaces with robust",
+            "backend systems, delivering innovative and scalable applications",
+            "that meet client and organizational needs."
+        ],
+        "vision":"Ambition",
+        "description2":[
+            "To grow as a versatile and skilled programmer, building impactful",
+            "digital solutions that empower communities and drive",
+            "technological progress, while fostering a passion for creativity",
+            "and lifelong learning in the tech industry."
+        ],
+        "imgMisiion":"",
+        "imgVision":""
+    },
+    
+    "services": {
+        "tittle1": "Services",
+
+        "service1": "Interactive UI Development",
+        "description1":[
+            "Usability",
+            "Responsiveness"
+        ],
+        "service2": "Database Management Systems",
+        "description2":[
+            "Data Retrieval",
+            "Scalability"
+        ],
+        "service3": "Full-Stack E-commerce Platform",
+        "description3":[
+            "Back-End Development",
+            "Front-End Development"
+        ],
+        "service4": "API Development and Integration",
+        "description4":[
+            "API Documentation",
+            "Testing and Debugging"
+        ],
+        "imgService":""
+    },
+    "projects": {
+        "tittle1": "Projects",
+        "text":[
+            "These highlights showcase academic projects completed in various programming languages.",
+            "To view more finalized projects, please visit my GitHub profile."
+        ],
+        "project1": "Fantasy Costume",
+        "imgProject1":"",
+        "description1":[
+            "Database and queries",
+            "for costume shop system."
+        ],
+        "project2": "Curando Patitas",
+        "imgProject2":"",
+        "description2":[
+            "Veterinary Control Program",
+            ""
+        ],
+        "project3": "Deseo Parking Lot",
+        "imgProject3":"",
+        "description3":[
+            "Parking Lot program",
+            ""
+        ],
+        "project4": "Donkey Race",
+        "imgProject4":"",
+        "description4":[
+            "Gambling Control Program",
+            ""
+        ],
+        "buttonProjects":[
+            "Check out",
+            "my GitHub"
+        ]
+
+    },
+    "expertise": {
+        "tittle1": "Expertise",
+        "expertise1": "Python",
+        "imgExpertise1":"",
+        "expertise2": "Html",
+        "imgExpertise2":"",
+        "expertise3": "Css",
+        "imgExpertise3":"",
+        "expertise4": "Javascript",
+        "imgExpertise4":"",
+        "expertise5": "Java",
+        "imgExpertise5":"",
+        "expertise6": "MySQL",
+        "imgExpertise6":"",
+        "expertise7": "React",
+        "imgExpertise7":"",
+        "expertise8": "Git",
+        "imgExpertise8":""
+
+
+
+    },
+    "contact": {
+        "form": {
+            "name": "Name",
+            "email": "Email",
+            "message": "Message"
+        },
+        "submitText": "Send"
+    }
+}
