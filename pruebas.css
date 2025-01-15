@@ -24,6 +24,9 @@ body{
     width: 100vw;
     
 }
+a{
+    text-decoration: none;
+}
 /* WELCOME */
 .welcome{
     display: flex;
@@ -33,7 +36,7 @@ body{
     align-items: center;
     width: 100%;
     height: 100vh;
-    font-size: 5rem;
+    font-size: 6vw;
     color: var(--tittle);
 
     opacity: 1; /* Por defecto visible */
@@ -61,7 +64,7 @@ body{
         url('imagenes/decoracionIzquierda.png') no-repeat bottom left,
         url('imagenes/decoracionDerecha.png') no-repeat top right,
         linear-gradient(to right, var(--color_fondo1), var(--color_fondo2));
-    background-size: auto, auto, cover;
+    background-size: 21%, 21%, cover;
     transition:0.5s ;
 }
 .main.active{
@@ -70,13 +73,13 @@ body{
     gap: 1rem;
     height: 100vh;
     width: auto;
-    margin-left: 6.8%;
+    margin-left: 7%;
 
     background: 
         url('imagenes/decoracionIzquierda.png') no-repeat bottom left,
         url('imagenes/decoracionDerecha.png') no-repeat top right,
         linear-gradient(to right, var(--color_fondo1), var(--color_fondo2));
-    background-size: auto, auto, cover;
+    background-size: 21%, 20%, cover;
     
     transition:0.5s ;
     text-align: center;
@@ -119,14 +122,14 @@ body{
     /* width: 80vw; */
 }
 .greeting{
-    font-size: 3.4rem;
+    font-size: 4vw;
     color:  var(--sub-title);
     margin-top: 0vh;
     margin-bottom: 2.5vh;
 }
 
 .whoAmI{
-    font-size: 4rem;
+    font-size: 5vw;
     display: flex;
     justify-content:center;
     gap: 0.8vw;
@@ -135,27 +138,27 @@ body{
     color: var(--tittle);
 }
 h1{
-    font-size: 4.2rem;
+    font-size: 5.2vw;
     color:var(--blanco);
     margin-bottom: 1vh;
 }
 .title{
-    font-size: 2.5rem;
+    font-size: 3vw;
     color: var(--tittle);
     margin-bottom: 4vh;
 }
 .text{
-    font-size: 1.2rem;
+    font-size: 1.5vw;
     color:var(--blanco);
     margin-bottom: 1vh;
 }
 .text1{
-    font-size: 1.2rem;
+    font-size: 1.5vw;
     color:var(--blanco);
     margin-bottom: 15vh;
 }
 .sub-text{
-    font-size: 1.2rem;
+    font-size: 1.6vw;
     color:var(--sub-title);
 }
 .divisionFlechasGo{
@@ -167,27 +170,21 @@ h1{
 }
 .flechaGo{
     margin-top: 1.3vh;
-    font-size: 3rem;
+    font-size: 3.5vw;
     color: var(--flecha);
 }
 
 /* --------  BOTON DE GO */
 .iniciar{
     display: none;
-    /* opacity: 0; 
-    transition: opacity 1s ease;  */
 }
 .iniciar.active{
     display: block;
-    /* opacity: 1;
-    transition: opacity 1s ease; */
     z-index: 10;
     width: auto;
     height: auto;
-    /* position: absolute; */
-    /* top: 80vh; */
-    /* left: 46.5vw; */
-    font-size: 3.5rem;
+
+    font-size: 4vw;
 
     border: none;
     background: transparent;
@@ -227,6 +224,7 @@ h1{
     pointer-events: none; 
 }
 
+
 /* ----NAVEGACION------- */
 
 .header-container{
@@ -242,9 +240,7 @@ h1{
     transition: 0.5s;
     z-index: 3;
 }
-/* #Ticono{
-    font-size: 4rem;
-} */
+
 .navigation{
     position: fixed;
     width: 7%;
@@ -274,15 +270,12 @@ h1{
 }
 
 .navigation.active{
-    width: 20vw;
+    width: 18vw;
     /* border-right: 1.5px solid var(--negro); */
 }
 
 .toggle{
     position: relative;
-    /* width: 60px; */
-    /* height: 60px; */
-    /* margin-top: 1vh; */
     margin-bottom: 10vh;
     display: flex;
     justify-content: center;
@@ -298,7 +291,7 @@ h1{
     color: var(--blanco);
 }
 .toggle ion-icon{
-
+    font-size: 4.2vw;
 }
 
 .navigation ul{
@@ -408,6 +401,11 @@ h1{
     color: var(--blanco);
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
     font-size: 3.2vw; 
+    transition: 0.5s;
+}
+.foto h2:hover{
+    text-shadow: 0px 0px 6px var(--titulo-flotante);
+    transition: 0.5s;
 }
 .foto h6{
     position: absolute; 
@@ -435,7 +433,14 @@ h1{
 }
 .logosImagen ion-icon{
     color: var(--blanco);
+    transition: 2.5s;
 }
+.logosImagen ion-icon:hover{
+    color: var(--titulo-flotante);
+    font-size: 2.8vw; 
+    transition: 0.5s;
+}
+
 .foto.active{
     font-size: 3rem; 
     background-image: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); /* Gradiente de opacidad */
@@ -455,16 +460,49 @@ h1{
 
 .texto{
     display: none;
-    font-size: 3rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: var(--blanco);
+    /* gap: 1vh; */
+}
+.texto h4{
+    color: var(--tittle);
+    font-size: 4.5vw;
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+    width: 100%;
+    text-align: left;
 }
 
+.texto div{
+    font-size: 1.5vw;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: 4.5vw;
+    margin-top: 1.5vw;
+}
+.texto div p{
+    margin-top: .7vh;
+}
+#flechasScroll{
+    padding-top: 4vh;
+    margin-left: 0;
+    margin-right: 15vw;
+    text-align: right;
+    font-size: 3.5vw;
+}
+#flechasScroll ion-icon{
+    color: var(--flecha);
+    transition: 1.5s;
+}
 
-
-
-
-
-
+#flechasScroll ion-icon:hover{
+    color: var(--titulo-flotante);
+    transform: scale(0.7);
+    transition: 0.5s;
+}
 
 
 
