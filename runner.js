@@ -31,48 +31,73 @@ document.addEventListener('DOMContentLoaded', () => {
 
   async function loadContent(section) {
     try {
-      const response = await fetch(`content_${currentLanguage}.json`);
+      const response = await fetch(`content/content_${currentLanguage}.json`);
       if (!response.ok) throw new Error('Error al cargar el archivo JSON');
       const data = await response.json();//carga del json
 
 
-      switch (section) {// segun el caso genera la section  EN  ${data.intro.greeting} VAS CAMBIANDO DESPUES DEL PUNTO LA PALABRA SEGUN COMO SE LLAME LA CLAVE EN EL JSON
+      switch (section) {
+
         case 'intro':
-          let introHtml = `
-            <section id="intro">
-                <article>
-                <p >${data.intro.greeting}</p>
-                <p >${data.intro.whoAmI}</p>
-                <h1>${data.intro.title}</h1>
-                <p>${data.intro.subtitle}</p>
+          let introHtml =`
+            <h5 class="welcome">${data.intro.welcome}</h5>
+            <section class="first">
+              <h3 class="greeting">${data.first.greeting}</h3>
+              <div class="whoAmI">
+                <p class="this">${data.first.whoAmI}</p>
+                <h1>${data.first.name}</h1>
+              </div>
+              <h4 class="title">${data.first.title1}</h4>
+
+              <p class="text">${data.first.text}</p>
+              <p class="text1">${data.first.text1}</p>
+
+              <p class="sub-text">${data.first.sub_text}</p>
+              ${data.first.sub_text.map(line => <p class="sub-text">${line}</p>).join('')}
+
+              <div class="divisionFlechasGo">
+                <ion-icon class="flechaGo" name="arrow-redo-sharp"></ion-icon>
+                <button class="iniciar">${data.first.button_Go}</button>
+                <ion-icon class="flechaGo" name="arrow-undo-sharp"></ion-icon>
+              </div>
+            </section>
           `;
-
-
-          // Iterar sobre el array `text` que se encuentra en el json y añade cada línea
-          //recuerda que se hizo asi para que el orden de las nias de texto quedara como esta en el canva
-          //si no lo tomaba como una sola linea
-          data.intro.text.forEach(line => {
-            introHtml += `<p>${line}</p>`;
-          });
-
-
-          introHtml += `
-              <button>${data.intro.buttonAboutMe}</button>
-              <button>${data.intro.buttonSomeServices}</button>
-          </article>    
-      `;// se creo una section y luego un article para la parte de texto y otro article mas abajo para la imagen
-
-
-          introHtml += `
-                          <article>
-                              <img src=${data.intro.imgIntro} alt="imgIntro">
-                          </article>
-                      </section>
-                  `;
-
-
           content.innerHTML = introHtml;
+          break;
+
+        case 'aboutMe':
+          let aboutMe = `
+            <h5 class="introAbout">${data.intro_about.think}</h5>
+
+            <section class="foto">
+              <img src="${data.aboutMe.imgAboutMe}" alt="foto de perfil">
+              <h2>${data.aboutMe.name}</h2>
+              <h6>${data.aboutMe.occupation}</h6>
+              <div class="logosImagen">
+                <a href="${data.aboutMe.imgGit}" target="_blank" rel="noopener noreferrer">
+                    <ion-icon name="logo-github"></ion-icon>
+                </a>
+                <a href="${data.aboutMe.imgLinkedin}" target="_blank" rel="noopener noreferrer">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+                <a href="${data.aboutMe.imgWhatsApp}" target="_blank" rel="noopener noreferrer">
+                    <ion-icon name="logo-whatsapp"></ion-icon>
+                </a>
+              </div>
+            </section>
+            
+
+            <section class="texto">
+              <h2>Hola soy texto</h2>
+            </section>
+
+          `;
+          content.innerHTML = aboutMe;
           break;// intro va hasta aqui
+
+
+// COMPLETADO HASTA AQUI FALTA ARREGLAR ABOUTME
+
 
 
         case 'aboutMe':

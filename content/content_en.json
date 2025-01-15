@@ -5,20 +5,21 @@
     },
     "first": {
         "greeting":"Hey there!",
-        "whoAmI":"This is Jhoan Diaz",
+        "whoAmI":"This is ",
+        "name":"Jhoan Diaz",
         "title": "Full-Stack Developer",
         "title1":"Developer",
-        "text":[
+        "text":
             "Explore my portfolio, where I combine programming expertise with a creative",
-            "mindset to tackle exciting tech challenges and bring innovative projects to life!"
-        ],
-        "sub-text":[
+        "text1":
+            "mindset to tackle exciting tech challenges and bring innovative projects to life!",
+        "sub_text":[
             "Talent doesn't guarantee victory, but",
             "discipline paves the way to it."
         ],
-        "button-Go":"GO!"
+        "button_Go":"GO!"
     },
-    "intro-about": {
+    "intro_about": {
         "think": "Think..."
     },
     "aboutMe": {
@@ -40,10 +41,10 @@
             "professionally, contributing leadership to impactful projects and",
             "fostering a collaborative atmosphere."
         ],
-        "imgLin":"",
-        "imgEmail":"",
-        "imgGit":"",
-        "imgAboutMe":""
+        "imgLinkedin":"https://www.linkedin.com/in/jhoan-ardila/",
+        "imgWhatsApp":"https://wa.me/573163449500",
+        "imgGit":"https://github.com/JhoanDiazArdila",
+        "imgAboutMe":"imagenes/fotoPerfil.png"
     },
     "principles": {
         "tittle1": "Guiding Lights",
