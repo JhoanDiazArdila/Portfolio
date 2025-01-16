@@ -70,7 +70,7 @@ a{
 .main.active{
     display: grid;
     grid-template-columns: .8fr 1.2fr;
-    gap: 1rem;
+    gap: .8vw;
     height: 100vh;
     width: auto;
     margin-left: 7%;
@@ -261,7 +261,7 @@ h1{
 .navigation{
     position: fixed;
     width: 7%;
-    height: 100%;
+    height: 100vh;
     background: linear-gradient(to right, var(--color_fondo1), var(--color_fondo2));
     /* border-left: 15px solid var(--color_fondo1); */
     transition: 0.5s;
@@ -486,10 +486,12 @@ h1{
 .texto h4{
     color: var(--tittle);
     font-size: 4.5vw;
-    margin-top: 5vh;
+    margin-top: -4vh;
     margin-bottom: 3vh;
     width: 100%;
     text-align: left;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.79); 
+    text-shadow: -1.5px 1.5px 1px var(--flecha); 
 }
 
 .texto div{
@@ -503,10 +505,10 @@ h1{
 .texto div p{
     margin-top: .7vh;
 }
-#flechasScroll{
+/* #flechasScroll{
     padding-top: 2vh;
     margin-left: 2vw;
-    /* margin-right: 15vw; */
+
     text-align: left;
     font-size: 3vw;
 }
@@ -519,7 +521,37 @@ h1{
     color: var(--titulo-flotante);
     transform: scale(0.7);
     transition: 0.5s;
+} */
+#flechasScroll {
+    position: fixed; /* Fija el elemento en la pantalla */
+    bottom: 3vh; /* Separación desde la parte inferior */
+    right: 3vw; /* Separación desde el lado izquierdo */
+    font-size: 3.3vw; 
+    display: flex; 
+    gap: 12px; 
+    z-index: 1000; 
 }
+
+/* Estilos para los íconos */
+#flechasScroll ion-icon {
+    color: var(--flecha); 
+    transition: color 1.5s, transform 0.5s; 
+    cursor: pointer; 
+}
+
+/* Efecto al pasar el mouse por encima */
+#flechasScroll ion-icon:hover {
+    color: var(--titulo-flotante); 
+    transform: scale(0.7); 
+}
+
+
+
+
+
+
+
+
 
 
 /* --------PRINCIPLESS--------PRINCIPLESS--------PRINCIPLESS */
@@ -529,19 +561,19 @@ h1{
 }
 .principles.active {
     display: grid;
-    grid-template-columns: 1fr .5fr 1fr; /* 3 columnas de igual tamaño */
+    grid-template-columns: 1fr .8fr 1fr; /* 3 columnas de igual tamaño */
     grid-template-rows: auto auto auto; /* 3 filas de altura automática */
     grid-template-areas: 
         "head head head"
         "body1 body2 body3"
         "foot1 foot2 foot3"; 
     gap: 1vw;  
-    width: 95vw;
+    width: 92vw;
     height: 80vh;
     align-items: start;
     transition: 2.5s;
-    /* margin-left: 2vw;
-    margin-right: 2vw; */
+
+    /* margin-right: 2vw;  */
 }
 
 .principles.active p{
@@ -560,6 +592,11 @@ h1{
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.79); 
     text-shadow: -1.5px -1.5px 1px var(--flecha); 
 }
+.principles div{
+    /* width: 28vw; */
+    height: 10vw;
+}
+
 
 .body1 {
     grid-area: body1;
@@ -617,7 +654,6 @@ h1{
     grid-area: foot1;
     padding: 0px;
     text-align: right;
-
     transition: 2.5s;
 }
 .foot1 p{
@@ -626,12 +662,15 @@ h1{
 }
 .foot1:hover p{
     display: grid;
-    padding-left: 20vw;
+    padding-left: 15vw;
 }
 
 .foot2 {
-    display: none;
+    /* display: none; */
     grid-area: foot2;
+    background: 
+    url('imagenes/vela1Amarillo.png') no-repeat center;
+    z-index: 5;
 }
 
 .foot3 {
@@ -646,28 +685,10 @@ h1{
 .foot3:hover p{
     display: grid;
     text-align: center;
-    padding-right: 18vw;
+    padding-right: 15vw;
 }
 
 
-#flechasScrollPrinciple{
-    padding-top: 4vh;
-    margin-top: 4vh;
-    /* margin-right: 15vw; */
-    /* text-align: right; */
-    font-size: 3.5vw;
-}
-#flechasScrollPrinciple ion-icon{
-    color: var(--flecha);
-    transition: 1.5s;
-    margin-top: 4vh;
-}
-
-#flechasScrollPrinciple ion-icon:hover{
-    color: var(--titulo-flotante);
-    transform: scale(0.7);
-    transition: 0.5s;
-}
 
 /* ----------- MISION---------  MISION--------- MISION---------*/
 
@@ -675,7 +696,7 @@ h1{
     display: none;
     flex-direction: column;
     justify-content: center;
-    
+    margin-top: -10vh;
     color: var(--blanco);
     /* gap: 1vh; */
 }
@@ -710,28 +731,69 @@ h1{
     margin-top: .7vh;
 }
 
+/* ------SERVICES----------SERVICES----------SERVICES--------- */
 
-#flechasScrollMision{
-    padding-top: 1vh;
-    margin-top: 1vh;
-    margin-bottom: -2vw;
-    /* margin-right: 15vw; */
-    text-align: left;
-    font-size: 3.5vw;
+.services{
+    display: none;
+    grid-template-rows: .2fr 1fr;
+    height: 75vh;
+    align-self: start;
+    margin-top: 9vh;
 }
-#flechasScrollMision ion-icon{
-    color: var(--flecha);
-    transition: 1.5s;
-    margin-top: 1vh;
+.services h4{
+    color: var(--tittle);
+    font-size: 4.8vw;
+    margin-bottom: 3vh;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.79); 
+    text-shadow: -1.5px 1.5px 1px var(--flecha); 
 }
-
-#flechasScrollMision ion-icon:hover{
+.gridServices{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-inline: 5vw;
+    gap: 2vw;
+}
+.gridServices h6{
+    font-size: 2vw;
+    padding: 1.5vw;
     color: var(--titulo-flotante);
-    transform: scale(0.7);
-    transition: 0.5s;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.79); 
+    /* text-shadow: -1.5px 1.5px 1px var(--color_fondo1);  */
+
+}
+.gridServices p{
+    color: var(--blanco);
+    margin: 1.3vw;
+    text-align: justify;
+    line-height: 1.2;
+}
+.gridServices ion-icon{
+    font-size: 3.5vw;
+    color: var(--titulo-flotante);
+    /* text-shadow: 2px 2px 50px var(--blanco); */
 }
 
 
+.service1, .service2, .service3 {
+    background: linear-gradient(to bottom, #141e2460, #394f5025);
+    border-radius: 1.5vw;
+    height: 80%;
+    backdrop-filter: blur(2px); 
+    -webkit-backdrop-filter: blur(2px); 
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Borde tenue */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.349); /* Sombra ligera */
+    transition: 1.5s;
+}
 
+.service2 {
+    align-self: center;
+}
 
+.service3 {
+    align-self: flex-end;
+}
 
+.service1:hover, .service2:hover, .service3:hover {
+    scale: 1.1;
+    transition: 1.5s;
+}

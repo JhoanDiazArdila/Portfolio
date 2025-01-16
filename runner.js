@@ -31,7 +31,40 @@ const flechaBajarPrinci = document.querySelector("#bajarPrinci");
 const flechaSubirPrinci = document.querySelector("#subirPrinci");
 
 const mision = document.querySelector(".mision");
+const flechaBajarMision = document.querySelector("#bajarMision");
+const flechaSubirMision = document.querySelector("#subirMision");
 
+const services = document.querySelector(".services");
+const flechaBajarServices = document.querySelector("#bajarServi");
+const flechaSubirServices = document.querySelector("#subirServi");
+
+
+
+
+//BOTONES NAV
+const botonAbout = document.querySelector("#about");
+const botonServices = document.querySelector("#services");
+const botonExpertise = document.querySelector("#expertise");
+const botonProjects = document.querySelector("#projects");
+const botonContact = document.querySelector("#contact");
+const botonLanguaje = document.querySelector("#languageSelector");
+
+
+
+// DESCARGAR CURRICULUM
+document.addEventListener('DOMContentLoaded', () => {
+  const link = document.getElementById('vitae');
+
+  link.addEventListener('click', (event) => {
+      event.preventDefault(); // Prevenir la navegación predeterminada
+
+      const fileUrl = 'documentos/CurriculumVitae_JhoanDiaz.pdf'; // Cambia esto a la ubicación real del archivo
+      const a = document.createElement('a');
+      a.href = fileUrl;
+      a.download = 'Curriculum_Vitae_JhoanDiaz.pdf'; // Nombre con el que se descargará
+      a.click();
+  });
+});
 
 
 
@@ -94,9 +127,17 @@ flechaBajarAbout.onclick = function(){
   main.classList.remove("active");
   main.classList.add("nodivision");
   principles.classList.add("active");
-
+  simulateHover();
 };
 
+
+flechaSubirPrinci.onclick = function(){
+  principles.classList.remove("active");
+  main.classList.remove("nodivision");
+  main.classList.toggle("active"); // Muestra el contenido principal
+  soyFoto.style.display = 'flex';
+  soyTexto.style.display = 'flex';
+};
 flechaBajarPrinci.onclick = function(){
   principles.classList.remove("active");
   main.classList.remove("nodivision");
@@ -105,6 +146,74 @@ flechaBajarPrinci.onclick = function(){
   mision.style.display = 'flex';
 };
 
+
+flechaSubirMision.onclick = function(){
+  mision.style.display = 'none';
+  soyFoto.style.display = 'none';
+  main.classList.remove("active");
+  main.classList.add("nodivision");
+  principles.classList.add("active");
+};
+flechaBajarMision.onclick = function(){
+  mision.style.display = 'none';
+  soyFoto.style.display = 'none';
+  main.classList.remove("active");
+  main.classList.add("nodivision");
+  services.style.display = 'grid';
+};
+
+
+flechaSubirServices.onclick = function(){
+  services.style.display = 'none';
+  main.classList.remove("nodivision");
+  main.classList.add("active");
+  soyFoto.style.display = 'flex';
+  mision.style.display = 'flex';
+};
+
+
+
+
+function simulateHover() {
+  // Selecciona las clases objetivo
+  const classes = [".foot3", ".foot1", ".body3", ".body2", ".body1"];
+  
+  setInterval(() => {
+    // Seleccionar una clase aleatoria
+    const randomClass = classes[Math.floor(Math.random() * classes.length)];
+    const elements = document.querySelectorAll(randomClass);
+    
+    if (elements.length > 0) {
+      // Seleccionar un elemento aleatorio de esa clase
+      const randomElement = elements[Math.floor(Math.random() * elements.length)];
+      
+      // Simular hover aplicando estilos
+      const pElements = randomElement.querySelectorAll("p");
+      pElements.forEach(p => {
+        p.style.display = "grid";
+        p.style.transition = "2.5s";
+        
+        if (randomClass === ".foot3") {
+          p.style.textAlign = "center";
+          p.style.paddingRight = "15vw";
+        } else if (randomClass === ".foot1") {
+          p.style.paddingLeft = "15vw";
+        }
+      });
+
+      // Remover el efecto después de un tiempo para simular el fin del hover
+      setTimeout(() => {
+        pElements.forEach(p => {
+          p.style.display = "";
+          p.style.textAlign = "";
+          p.style.paddingRight = "";
+          p.style.paddingLeft = "";
+          p.style.transition = "";
+        });
+      }, 2000); // Mantener el estilo por 2 segundos
+    }
+  }, 2000); // Repetir cada 2 segundos
+}
 
 
 /*
