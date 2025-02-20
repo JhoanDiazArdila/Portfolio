@@ -20,8 +20,9 @@
 }
 body{
     height:100vh;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     width: 100vw;
+    overflow: hidden;
     
 }
 a{
@@ -85,7 +86,7 @@ a{
     text-align: center;
 }
 .main.nodivision{
-    display: grid;
+    /* display: grid; */
     grid-template-columns: 1fr;
     gap: 1rem;
     height: 100vh;
@@ -245,9 +246,6 @@ h1{
 /* ----NAVEGACION------- */
 
 .header-container{
-    /* position: relative;
-    width: 100%;
-     */
     display: none;
 }
 .header-container.active{
@@ -267,24 +265,8 @@ h1{
     transition: 0.5s;
     overflow: hidden;
 }
-@media (max-width: 775px) { /* Para pantallas más pequeñas */
-    .navigation {
-        width: 10vw; 
-    }
-    .navigation.active{
-        width: 20vw;
-    }
-    .navigation.active .icon{
-        display: none;
-    }
-    .navigation.active li{
-        padding: 1.2vw;
-    }
-    .navigation.active .title{
-        font-size: 2vw;
-        text-align: center;
-    }
-}
+
+
 
 .navigation.active{
     width: 18vw;
@@ -386,6 +368,9 @@ h1{
 
 
 
+
+
+
 /* Aca empieza la zona main */
 
 /* -------------ABOUT --------------ABOUT-------------ABOUT---- */
@@ -412,8 +397,8 @@ h1{
 .foto h2{
     position: absolute; 
     bottom: 15%; 
-    left: 48.5%; /* Centra horizontalmente */
-    transform: translateX(-51.5%); /* Ajusta la alineación horizontal */
+    /* left: 48.5%; Centra horizontalmente */
+    /* transform: translateX(-51.5%); Ajusta la alineación horizontal */
     z-index: 2; 
     color: var(--blanco);
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
@@ -499,7 +484,7 @@ h1{
     text-align: left;
     width: 100%;
     box-sizing: border-box;
-    margin-left: 4.5vw;
+    /* margin-left: 4.5vw; */
     margin-top: 1.5vw;
 }
 .texto div p{
@@ -735,7 +720,7 @@ h1{
 
 .services{
     display: none;
-    grid-template-rows: .2fr 1fr;
+    grid-template-rows: .2fr .8fr;
     height: 75vh;
     align-self: start;
     margin-top: 9vh;
@@ -796,4 +781,641 @@ h1{
 .service1:hover, .service2:hover, .service3:hover {
     scale: 1.1;
     transition: 1.5s;
+}
+
+
+
+/* EXPERTISE------ EXPERTISE------EXPERTISE------EXPERTISE------*/
+.expertise{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width:95%;
+
+    height: 75vh;
+    overflow-x: hidden;
+    /* color: var(--blanco); */
+    /* gap: 1vh; */
+}
+.expertise h5{
+    color: var(--tittle);
+    font-size: 4.5vw;
+    /* margin-top: -4vh; */
+    margin-bottom: 3vh;
+    width: 100%;
+    text-align: center;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.79); 
+    /* text-shadow: -1.5px 1.5px 1px var(--flecha);  */
+}
+.contenedorImages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    overflow: auto;
+    gap: 5vw;
+    flex-wrap: wrap;
+    z-index: 2;
+}
+.contenedorImages img{
+    filter: grayscale(100%);
+    transition: 2.5s;
+}
+.contenedorImages img:hover{
+    filter: grayscale(0%);
+    transition: .6s;
+    
+}
+.expertise h4{
+    color: var(--blanco);
+}
+.expertise h4:hover{
+    color: var(--flecha);
+}
+
+
+
+
+
+
+
+
+
+/* MOBILE VERSION ----------- MOBILE VERSION ----------- */
+.nav_mobile{
+    display: none;
+}
+
+.toggle_mobile{
+    cursor: pointer;
+    color: var(--tittle);
+    background: var(--toggle);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    position: relative;
+}
+.toggle_mobile:hover{
+    filter: drop-shadow(0px 0px 8px var(--flecha));
+    /* text-shadow: 0px 0px 3px var(--flecha);  */
+    color: var(--blanco);
+}
+.toggle_mobile ion-icon{
+    font-size: 6vw;
+}
+
+
+.nav-list-mobile{
+    display: none;
+}
+
+.nav_mobile ul{
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 6vw;
+    margin-top: 2vh;
+    width: 100%;
+}
+.nav_mobile ul li {
+
+    list-style: none;
+    margin-bottom: 1vh;
+}
+
+.nav_mobile ul li :hover,
+.nav_mobile ul li.hovered{
+    filter: drop-shadow(0px 0px 3px var(--flecha));
+    color: var(--negro);
+}
+
+.nav_mobile ul li a{
+    position: relative;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--tittle);
+    gap: 0vw;
+}
+.nav_mobile ul li:hover a,
+.nav_mobile ul li.hovered a{
+    color: var(--sub-tittle);
+}
+.nav_mobile ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height:70px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.nav_mobile ul li.curriculum{
+    margin-top: 10vh;
+    /* pointer-events: none; */
+}
+.nav_mobile ul li.curriculum:hover,
+.nav_mobile ul li.curriculum.hovered {
+    filter: drop-shadow(0px 0px 1px var(--flecha));
+    text-shadow: 0px 0px 1px var(--flecha);
+    color: var(--blanco);
+}
+
+.nav_mobile ul li.curriculum a:hover,
+.nav_mobile ul li.curriculum.hovered a {
+    color: var(--sub-tittle);
+}
+
+.nav_mobile ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 3.5vw;
+    height: .5vh;
+    line-height: 58px;
+    text-align: start;
+    white-space: nowrap;
+    font-size: 3vw;
+    text-shadow: 0px 0px 1px var(--negro);
+}
+
+
+@media (max-width: 1150px) {
+    .header-container.active {
+        display: none;
+    }
+    .nav_mobile{
+        width: 8vw;
+        display: block;
+        position: fixed;
+        background: linear-gradient(to right, var(--color_fondo1), var(--color_fondo2));
+        transition: 0.5s;
+        overflow: hidden;
+        z-index: 15;
+        border-bottom-right-radius: 20px;
+    }
+    .nav_mobile.active{
+        width: 40vw;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 50px;
+        box-shadow: 10px 10px 0px -8px var(--flecha);
+        /* height: 60vh; */
+    }
+    .nav-list-mobile.active{
+        display: flex;
+    }
+    .welcome{
+        font-size: 9vw;
+    }
+    .main{
+        background-size: 34%, 30%, cover;
+    }
+    .main.active {
+        margin-left: 0;
+        background-size: 34%, 34%, cover;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .greeting {
+        font-size: 7vw;
+    }
+    .whoAmI {
+        font-size: 8vw;
+    }
+    h1 {
+        font-size: 8.3vw;
+    }
+    .title{
+        font-size: 5vw;
+    }
+    .text{
+        font-size: 2.5vw;
+    }
+    .text1{
+        font-size: 2.5vw;
+    }
+    .sub-text{
+        font-size: 2.6vw;
+    }
+    .flechaGo{
+        font-size: 6.5vw;
+    }
+    .iniciar.active {
+        font-size: 8vw;
+    }
+
+/* ABOUT ME */
+    .foto{
+        height: 50vh;
+        min-height: 20vh;
+    }
+    .foto img {
+        width: 75%;
+    }
+    .foto h2{
+        font-size: 5vw;
+        bottom: 20%;
+        /* transform: translateX(0%);
+        left: 0%; */
+    }
+    .foto h6 {
+        font-size: 3vw;
+        bottom: 13%;
+    }
+    .logosImagen{
+        font-size: 2.8vw; 
+    }
+    .texto{
+        min-height: 20vh;
+        height: 50vh;
+        width: 70%;
+    }
+    .texto h4 {
+        font-size: 7vw;
+        margin-top: 0;
+    }
+    .texto div{
+        margin-left: 4.5vw;
+        font-size: 1.8vw;
+    }
+    #flechasScroll {
+        font-size: 6vw;
+
+    }
+/* GUIDING LIGHTS */
+    .main.nodivision{
+        margin-left: 0;
+        background-size: 30%, 30%, cover;
+    }
+    .principles.active p{
+        font-size: 1.5vw;
+    }
+    .head {
+        font-size: 6vw;
+    }
+    .principles h6{
+        font-size: 4vw;
+    }
+    .foot1 p{
+        padding-left: 10vw;
+    }
+    .foot1:hover p{
+        padding-left: 10vw;
+    }
+    .foot3 p{
+        padding-right: 8vw;
+    }
+    .foot3:hover p{
+        padding-right: 8vw;
+    }
+/* MISION Y VISION */
+    .mision{
+        margin-top: 0;
+    }
+    .mision h4{
+        font-size: 8vw;
+    }
+    .aspiration{
+        margin-left: 0;
+    }
+    .mision .aspiration p{
+        font-size: 2.5vw;
+    }
+    .ambition{
+        margin-right: 0;
+    }
+    .mision p{
+        font-size: 2.5vw;
+    }
+
+/* SERVICES */
+
+    
+    .services {
+        margin-top: 0;
+    }
+    .services h4{
+        font-size: 5.8vw;
+    }
+    .gridServices h6{
+        font-size: 3vw;
+    }
+    .gridServices p{
+        font-size: 2vw;
+    }
+
+    .gridServices ion-icon{
+        font-size: 4.5vw;
+    }
+
+
+
+
+
+
+}
+
+
+
+
+
+
+@media (max-width: 800px) { /* Para pantallas más pequeñas */
+    .header-container.active {
+        display: none;
+    }
+    .nav_mobile{
+        width: 12vw;
+        display: block;
+        position: fixed;
+        background: linear-gradient(to right, var(--color_fondo1), var(--color_fondo2));
+        transition: 0.5s;
+        overflow: hidden;
+        z-index: 15;
+        border-bottom-right-radius: 20px;
+    }
+    .nav_mobile.active{
+        width: 40vw;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 50px;
+        box-shadow: 10px 10px 0px -8px var(--flecha);
+        /* height: 60vh; */
+    }
+    .nav-list-mobile.active{
+        display: flex;
+    }
+    .welcome{
+        font-size: 5rem;
+    }
+    .main{
+        background-size: 43%, 43%, cover;
+    }
+    .main.active {
+        margin-left: 0;
+        background-size: 38%, 32%, cover;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .greeting {
+        font-size: 9vw;
+    }
+    .whoAmI {
+        font-size: 10vw;
+    }
+    h1 {
+        font-size: 10.3vw;
+    }
+    .title{
+        font-size: 6vw;
+    }
+    .text{
+        font-size: 4vw;
+        margin-left: 3vw;
+        margin-right: 3vw;
+    }
+    .text1{
+        font-size: 4vw;
+        margin-left: 3.1vw;
+        margin-right: 3.1vw;
+    }
+    .sub-text{
+        font-size: 3.6vw;
+    }
+    .flechaGo{
+        font-size: 7.5vw;
+    }
+    .iniciar.active {
+        font-size: 9vw;
+    }
+
+/* ABOUT ME */
+    .foto{
+        height: 50vh;
+        min-height: 20vh;
+    }
+    .foto img {
+        width: 70%;
+    }
+    .foto h2{
+        font-size: 9vw;
+        bottom: 20%;
+    }
+    .foto h6 {
+        font-size: 5.8vw;
+        bottom: 13%;
+    }
+    .logosImagen{
+        font-size: 4.8vw; 
+    }
+    .texto{
+        min-height: 20vh;
+        height: 50vh;
+        width: 80%;
+    }
+    .texto h4 {
+        font-size: 12vw;
+        margin-top: 0;
+    }
+    .texto div{
+        margin-left: 4.5vw;
+        font-size: 2.7vw;
+    }
+    #flechasScroll {
+        font-size: 6vw;
+
+    }
+/* GUIDING LIGHTS */
+    .main.nodivision{
+        margin-left: 0;
+        background-size: 30%, 30%, cover;
+    }
+    .principles.active p{
+        font-size: 1.5vw;
+    }
+    .head {
+        font-size: 6vw;
+    }
+    .principles h6{
+        font-size: 4vw;
+    }
+    .foot1 p{
+        padding-left: 10vw;
+    }
+    .foot1:hover p{
+        padding-left: 10vw;
+    }
+    .foot2 {
+        display: none;
+    }
+    .foot3 p{
+        padding-right: 8vw;
+    }
+    .foot3:hover p{
+        padding-right: 8vw;
+    }
+/* MISION Y VISION */
+    .mision{
+        margin-top: 0;
+    }
+    .mision h4{
+        font-size: 8vw;
+    }
+    .aspiration{
+        margin-left: 0;
+    }
+    .mision .aspiration p{
+        font-size: 2.5vw;
+    }
+    .ambition{
+        margin-right: 0;
+    }
+    .mision p{
+        font-size: 2.5vw;
+    }
+
+/* SERVICES */
+
+    .services {
+        margin-top: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+    }
+
+    .services h4{
+        font-size: 5.8vw;
+    }
+    .gridServices{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        overflow-y: scroll;
+    }
+    .gridServices h6{
+        font-size: 3vw;
+    }
+    .gridServices p{
+        font-size: 2.6vw;
+    }
+
+    .gridServices ion-icon{
+        font-size: 4.5vw;
+    }
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+@media (max-width: 500px) { 
+    .toggle_mobile ion-icon{
+        font-size: 8vw;
+    }
+    .nav_mobile{
+        width: 15vw;
+    }
+    .foto{
+        height: 40vh;
+        min-height: 20vh;
+        
+    }
+    .texto{
+        min-height: 20vh;
+        height: 60vh;
+        width: 80%;
+        z-index: 1;
+    }
+    .texto h4 {
+        font-size: 13vw;
+        margin-top: 0;
+    }
+    .texto div{
+        margin-left: 4.5vw;
+        font-size: 3.5vw;
+    }
+    #flechasScroll {
+        font-size: 8vw;
+    }
+    /* GUIDING LIGHTS */
+    .principles.active {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .principles.active p{
+        font-size: 2.5vw;
+        
+    }
+    .head {
+        font-size: 9vw;
+    }
+    .principles h6{
+        font-size: 7vw;
+    }
+    .foot1 p{
+        padding-left: 0;
+    }
+    .foot1:hover p{
+        padding-left: 0;
+    }
+    .foot2 {
+        display: none;
+    }
+    .foot3 p{
+        padding-right: 0;
+    }
+    .foot3:hover p{
+        padding-right: 0;
+    }
+
+/* MISION Y VISION */
+    .mision{
+        width: 85%;
+    }
+    .mision h4{
+        font-size: 11vw;
+    }
+    .mision .aspiration p{
+        font-size: 4.3vw;
+    }
+    .mision p{
+        font-size: 4.3vw;
+    }
+
+/* SERVICES */
+
+    .services h4{
+        font-size:12vw;
+    }
+    .gridServices h6{
+        font-size: 6vw;
+    }
+    .gridServices p{
+        font-size: 4vw;
+    }
+
+    .gridServices ion-icon{
+        font-size: 7.5vw;
+    }
+
+
+
+
 }

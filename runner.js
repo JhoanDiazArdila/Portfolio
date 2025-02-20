@@ -15,6 +15,11 @@ const navigation = document.querySelector(".navigation");
 const main = document.querySelector(".main");
 
 
+const toggleMobile = document.querySelector(".toggle_mobile");
+const navigationMobile = document.querySelector(".nav_mobile");
+const navListMobile = document.querySelector(".nav-list-mobile");
+
+
 const botonIniciar = document.querySelector(".iniciar")
 const menu = document.querySelector(".header-container");
 const welcome = document.querySelector(".welcome");
@@ -22,6 +27,9 @@ const first = document.querySelector(".first");
 const introAbout = document.querySelector(".introAbout");
 const soyFoto = document.querySelector(".foto");
 const soyTexto = document.querySelector(".texto");
+
+
+
 
 const flechaBajarAbout = document.querySelector("#bajarAbout");
 const flechaSubirAbout = document.querySelector("#subirAbout");
@@ -38,7 +46,13 @@ const services = document.querySelector(".services");
 const flechaBajarServices = document.querySelector("#bajarServi");
 const flechaSubirServices = document.querySelector("#subirServi");
 
+const expertise = document.querySelector(".expertise");
+const flechaBajarExpertise = document.querySelector("#bajarExpert");
+const flechaSubirExpertise = document.querySelector("#subirExpert");
 
+const projects = document.querySelector(".projects");
+const flechaBajarProjects = document.querySelector("#bajarProjects");
+const flechaSubirProjects = document.querySelector("#bajarProjects");
 
 
 //BOTONES NAV
@@ -71,12 +85,22 @@ document.addEventListener('DOMContentLoaded', () => {
 // HACER CLICK TOGGLE
 toggle.onclick = function () {
     navigation.classList.toggle("active");
-
     soyFoto.classList.toggle("active");
     // main.classList.toggle("active");
     // menu.classList.toggle("active");
 
 };
+
+// Toggle Mobile
+toggleMobile.onclick = function () {
+    navigationMobile.classList.toggle("active");
+    navListMobile.classList.toggle("active");
+};
+
+
+
+
+
 
 // DESVANECER el WELCOME
 setTimeout(() => {
@@ -142,8 +166,13 @@ flechaBajarPrinci.onclick = function(){
   principles.classList.remove("active");
   main.classList.remove("nodivision");
   main.classList.add("active");
-  soyFoto.style.display = 'flex';
   mision.style.display = 'flex';
+  // Validar tamaño de pantanlla
+  if (window.innerWidth < 1150) {
+    soyFoto.style.display = 'none';
+  } else {
+    soyFoto.style.display = 'flex';
+  }
 };
 
 
@@ -159,7 +188,11 @@ flechaBajarMision.onclick = function(){
   soyFoto.style.display = 'none';
   main.classList.remove("active");
   main.classList.add("nodivision");
-  services.style.display = 'grid';
+  if (window.innerWidth < 800) {
+    services.style.display = 'flex';
+  }else{
+    services.style.display = 'grid';
+  }
 };
 
 
@@ -167,9 +200,23 @@ flechaSubirServices.onclick = function(){
   services.style.display = 'none';
   main.classList.remove("nodivision");
   main.classList.add("active");
-  soyFoto.style.display = 'flex';
   mision.style.display = 'flex';
+  if (window.innerWidth < 1150) {
+    soyFoto.style.display = 'none';
+  } else {
+    soyFoto.style.display = 'flex';
+  }
 };
+flechaBajarServices.onclick = function(){
+  services.style.display = 'none';
+  main.classList.remove("nodivision");
+  main.classList.add("active");
+  expertise.style.display = 'flex';
+
+  soyFoto.style.display = 'flex';
+  
+}
+
 
 
 
@@ -194,10 +241,19 @@ function simulateHover() {
         p.style.transition = "2.5s";
         
         if (randomClass === ".foot3") {
-          p.style.textAlign = "center";
-          p.style.paddingRight = "15vw";
+          if (window.innerWidth < 800) {
+            p.style.textAlign = "center";
+            p.style.paddingRight = "0"
+          } else {
+            p.style.textAlign = "center";
+            p.style.paddingRight = "15vw";
+          }
         } else if (randomClass === ".foot1") {
-          p.style.paddingLeft = "15vw";
+          if (window.innerWidth < 800) {
+            p.style.paddingLeft = "0"
+          } else {
+            p.style.paddingLeft = "15vw";
+          }
         }
       });
 
@@ -243,4 +299,12 @@ window.addEventListener('scroll', () => {
 */
 
 
+
+
+// ESCUCHA DE CLICKS
+document.addEventListener("click", function (event) {
+
+
+
+});
 
