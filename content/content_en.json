@@ -160,21 +160,21 @@
     "expertise": {
         "tittle1": "Expertise",
         "expertise1": "Python",
-        "imgExpertise1":"",
+        "imgExpertise1":"imagenes/python.png",
         "expertise2": "Html",
-        "imgExpertise2":"",
+        "imgExpertise2":"imagenes/html.png",
         "expertise3": "Css",
-        "imgExpertise3":"",
+        "imgExpertise3":"imagenes/css.png",
         "expertise4": "Javascript",
-        "imgExpertise4":"",
+        "imgExpertise4":"imagenes/javascript.png",
         "expertise5": "Java",
-        "imgExpertise5":"",
+        "imgExpertise5":"imagenes/java.png",
         "expertise6": "MySQL",
-        "imgExpertise6":"",
+        "imgExpertise6":"imagenes/mysql.png",
         "expertise7": "React",
-        "imgExpertise7":"",
+        "imgExpertise7":"imagenes/react.png",
         "expertise8": "Git",
-        "imgExpertise8":""
+        "imgExpertise8":"imagenes/git.png"
 
 
 

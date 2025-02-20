@@ -25,12 +25,11 @@ const menu = document.querySelector(".header-container");
 const welcome = document.querySelector(".welcome");
 const first = document.querySelector(".first");
 const introAbout = document.querySelector(".introAbout");
+
+// SECCIONES
+
 const soyFoto = document.querySelector(".foto");
 const soyTexto = document.querySelector(".texto");
-
-
-
-
 const flechaBajarAbout = document.querySelector("#bajarAbout");
 const flechaSubirAbout = document.querySelector("#subirAbout");
 
@@ -52,7 +51,7 @@ const flechaSubirExpertise = document.querySelector("#subirExpert");
 
 const projects = document.querySelector(".projects");
 const flechaBajarProjects = document.querySelector("#bajarProjects");
-const flechaSubirProjects = document.querySelector("#bajarProjects");
+const flechaSubirProjects = document.querySelector("#subirProjects");
 
 
 //BOTONES NAV
@@ -212,12 +211,173 @@ flechaBajarServices.onclick = function(){
   main.classList.remove("nodivision");
   main.classList.add("active");
   expertise.style.display = 'flex';
-
   soyFoto.style.display = 'flex';
-  
+  simulateHoverExpertise();
 }
 
 
+flechaSubirExpertise.onclick = function(){
+  soyFoto.style.display = 'none';
+  expertise.style.display = 'none';
+  main.classList.remove("active");
+  main.classList.add("nodivision");
+  if (window.innerWidth < 800) {
+    services.style.display = 'flex';
+  }else{
+    services.style.display = 'grid';
+  }
+}
+flechaBajarExpertise.onclick = function(){
+  expertise.style.display = 'none';
+  soyFoto.style.display = 'none';
+  main.classList.remove("active");
+  main.classList.add("nodivision");
+  projects.style.display = 'flex';
+}
+
+
+flechaSubirProjects.onclick = function(){
+  projects.style.display = 'none';
+  main.classList.remove("nodivision");
+  main.classList.add("active");
+  expertise.style.display = 'flex';
+  soyFoto.style.display = 'flex';
+  simulateHoverExpertise();
+}
+
+
+
+
+
+// Función para ocultar todas las secciones
+function hideAllSections() {
+  // Ocultamos cada sección
+  main.classList.remove("active", "nodivision");
+  soyFoto.style.display = 'none';
+  soyTexto.style.display = 'none';
+  if(principles) principles.classList.remove("active");
+  if(mision) mision.style.display = 'none';
+  if(services) services.style.display = 'none';
+  if(expertise) expertise.style.display = 'none';
+  if(projects) projects.style.display = 'none';
+}
+
+// Función para mostrar la sección deseada y gestionar soyFoto
+function showSection(section) {
+  // Primero ocultamos todas
+  hideAllSections();
+
+  // Luego, según la sección, la mostramos y ajustamos soyFoto
+  switch(section) {
+    case 'about': 
+      main.classList.toggle("active");
+      soyTexto.style.display = 'flex';
+      soyFoto.style.display = 'flex';
+      break;
+    case 'services':
+      if(services) {
+        main.classList.add("nodivision");
+        // Si el ancho es menor a 800, mostramos como flex, de lo contrario en grid
+        services.style.display = window.innerWidth < 800 ? 'flex' : 'grid';
+      }
+      break;
+    case 'expertise':
+      main.classList.add("active");
+      expertise.style.display = 'flex';
+      soyFoto.style.display = 'flex';
+      simulateHoverExpertise();
+      break;
+    case 'projects':
+      main.classList.add("nodivision");
+      projects.style.display = 'flex';
+      break;
+    case 'contact':
+      // Si tu sección de Contact se gestiona aparte, por ejemplo:
+      // document.querySelector(".contact").style.display = 'flex';
+      // Aquí también se oculta la foto.
+      soyFoto.style.display = 'none';
+      break;
+    // default:
+      // Por defecto, podrías decidir ocultar la foto o mostrarla según tu diseño.
+      // soyFoto.style.display = 'none';
+  }
+}
+
+// Eventos para el menú de escritorio
+document.querySelectorAll('.navigation .nav-list li a').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    showSection(link.id);
+  });
+});
+
+// Eventos para el menú móvil
+document.querySelectorAll('.nav_mobile .nav-list-mobile li a').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    showSection(link.id);
+  });
+});
+
+// Asignar eventos click a los botones de navegación
+// botonAbout.addEventListener('click', (e) => {
+//   e.preventDefault();
+//   showSection('about');
+// });
+// botonServices.addEventListener('click', (e) => {
+//   e.preventDefault();
+//   showSection('services');
+// });
+// botonExpertise.addEventListener('click', (e) => {
+//   e.preventDefault();
+//   showSection('expertise');
+// });
+// botonProjects.addEventListener('click', (e) => {
+//   console.log('click');
+//   e.preventDefault();
+//   showSection('projects');
+// });
+// botonContact.addEventListener('click', (e) => {
+//   e.preventDefault();
+//   showSection('contact');
+// });
+
+
+
+
+
+function simulateHoverExpertise() {
+  const classes = [".expertise1", ".expertise2", ".expertise3", ".expertise4", ".expertise5", ".expertise6", ".expertise7", ".expertise8"];
+
+
+  let toggle = true;
+
+  setInterval(() => {
+    // Seleccionar una clase aleatoria
+    const randomClass = classes[Math.floor(Math.random() * classes.length)];
+    const elements = document.querySelectorAll(randomClass);
+    
+
+    if (elements.length > 0) {
+      // Seleccionar un elemento aleatorio de esa clase
+      const randomElement = elements[Math.floor(Math.random() * elements.length)];
+      const img = randomElement.querySelector("img");
+
+      if (img) {
+        if (toggle) {
+          img.id = "hover-effect";
+        } else {
+          img.id = "hover-effect1";
+        }
+        // Invertir el toggle para el próximo ciclo
+        toggle = !toggle;
+        setTimeout(() => {
+          img.removeAttribute("id");
+        }, 1800);
+      }
+    }
+  }, 2000)
+}
 
 
 
